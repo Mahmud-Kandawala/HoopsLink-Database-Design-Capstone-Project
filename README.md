@@ -1,1 +1,1 @@
-# HoopsLink-Database-Design-Capstone-Project
+# HoopsLink: Database Design Capstone Project

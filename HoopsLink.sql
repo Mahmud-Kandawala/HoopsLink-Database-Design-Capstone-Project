@@ -1,6 +1,6 @@
----		Final Project: HoopsLink: Custom Coaching & Gear Hub DB ---
----							Course: CS-331- A					---		
----						 Name: Mahmud Kandawala					---
+---Final Project: HoopsLink: Custom Coaching & Gear Hub DB ---
+---	Course: CS-331- A	---		
+--- Name: Mahmud Kandawala	---
 
 
 CREATE DATABASE HoopsLinkDB;

@@ -6,29 +6,25 @@ For my capstone project, I will design and implement a cutting-edge platform cal
 
 Envisioned as a multi-faceted ecosystem, HoopsLink will streamline the connection between basketball aficionados and the resources they require to excel. The platform will encompass various services, such as personalized coaching sessions, gear procurement, and a review system that fosters a culture of continuous improvement and feedback. Whether one is taking their first dribble or preparing for professional leagues, HoopsLink is tailored to assist in their basketball journey. The cornerstone of HoopsLink is a bespoke database system that underpins the seamless operation of the platform. The database will not only handle intricate data relationships like linking players to coaches and orders to equipment but also empower users with intuitive views tailored to their specific roles. These views will enable customers to manage their profiles, schedule coaching sessions, order gear, and track payments efficiently and easily. Furthermore, coaches will be able to monitor their schedules, receive performance reviews, and interact with clients effectively.
 
-## Business Rules:
+## Business Rules for HoopsLink System
 
-1) Coach Availability for Sessions:
-- Rule: Coaches must indicate their available times, and these must be adhered to when scheduling sessions. Coaches cannot be double-booked.
+This document outlines the essential business rules that govern the operations and data management within the HoopsLink system. These rules are designed to ensure consistency, accuracy, and efficiency in handling data related to coaching, equipment ordering, and performance reviews.
 
-2) Customer Account Validation:
-- Rule: Customers must have a valid account with a unique email address to book a session or order gear.
+### Rules
 
-3) Equipment Stock Levels:
-- Rule: The inventory must not allow the sale of items that are out of stock. Orders can only be placed for items with a stock quantity greater than zero.
+- **Unique Customer Identification**
+  - **Rule:** Each customer must have a unique `customerID`. This ID is used to uniquely identify individual customers across the system and link their orders, sessions, and payments.
 
-4) Session Booking Timeframe:
-- Rule: Sessions must be booked at least 24 hours in advance and cannot be scheduled for past dates.
+- **Coach Assignment**
+  - **Rule:** Each coaching session must be assigned to only one coach. This assignment ensures that every session is properly managed and supervised by a qualified coach.
 
-5) Payment Completion Before Session:
-- Rule: Full payment for the coaching session must be processed and confirmed before the session's scheduled start time.
+- **Order and Payment Linkage**
+  - **Rule:** Each order must have a corresponding payment entry before the order is considered complete. This ensures financial transactions are recorded and linked to their respective orders.
 
-6) Review Submission Window:
-- Rule: Customers may submit reviews for coaching sessions within two weeks following the session date to ensure timely feedback.
+- **Inventory Stock Check**
+  - **Rule:** The system must not allow orders for items that have zero or negative stock quantities. This check prevents backorders and ensures that orders are fulfilled promptly.
 
-7) Order Cancellation Policy:
-- Rule: Customers can cancel gear orders up to 24 hours after placing the order, provided the order has not yet been shipped.
+- **Timely Performance Reviews**
+  - **Rule:** Coaches must receive at least one performance review per year. This ensures ongoing assessment and improvement of coaching quality.
 
-8) Personalized Gear Returns:
-- Rule: Personalized gear (e.g., custom jerseys) cannot be returned or exchanged unless there is a manufacturing defect.
-
+These rules are intended to provide a clear framework for managing interactions within the HoopsLink system and to facilitate the maintenance of high standards in customer service and operational management.

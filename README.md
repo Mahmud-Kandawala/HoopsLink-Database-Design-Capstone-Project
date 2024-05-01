@@ -31,6 +31,8 @@ These rules are intended to provide a clear framework for managing interactions 
 
 ## ER Diagram
 
+![HoopsLink ER Diagram](ER Diagram.png)
+
 ## ER Diagram Explanation for HoopsLink System
 
 ### Overview

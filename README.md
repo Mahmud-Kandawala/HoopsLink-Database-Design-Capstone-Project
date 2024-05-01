@@ -28,3 +28,38 @@ This document outlines the essential business rules that govern the operations a
   - **Rule:** Coaches must receive at least one performance review per year. This ensures ongoing assessment and improvement of coaching quality.
 
 These rules are intended to provide a clear framework for managing interactions within the HoopsLink system and to facilitate the maintenance of high standards in customer service and operational management.
+
+## ER Diagram
+
+## ER Diagram Explanation for HoopsLink System
+
+### Overview
+This document provides a detailed explanation of the ER diagram for the HoopsLink system. It describes the visual elements used in the diagram and explains how entities such as "Customer," "Order," "Session," "Coach," "Review," "Payment," "OrderItem," "Item," "Inventory," and "Supplier" are interconnected.
+
+### Textual Layout Description
+- **Rectangles (`+----------------+`)**: Represent entities in the ER diagram.
+- **Arrows (`<----`, `---->`)**: Indicate the direction of the relationship, pointing towards the "one" in a one-to-many (1:M) relationship.
+- **Cardinality (e.g., `1:1`, `1:M`, `M:1`)**: Indicates the type of relationship between entities.
+
+### Relationships
+- **Customer to Order**:
+  - `1:M` - One customer can place multiple orders, but each order is associated with only one customer.
+- **Order to Payment**:
+  - `1:1` - Each order has exactly one corresponding payment record, illustrating a one-to-one relationship where every individual order is paid for exactly once.
+- **Order to OrderItem**:
+  - `1:M` - One order can include multiple items.
+- **OrderItem to Item**:
+  - `M:1` - Multiple order items can refer to the same item in the inventory, meaning an item can be part of many different orders.
+- **OrderItem to Inventory**:
+  - `1:M` - This relationship shows that each record in the order item table relates to a single record in the inventory, indicating how many units of an item are included in the order. However, the inventory can relate to multiple order items.
+- **Item to Supplier**:
+  - `M:1` - Multiple items can be supplied by a single supplier, indicating that a supplier can provide various items.
+- **Item to Inventory**:
+  - `1:1` - Each item has a corresponding inventory record that tracks the stock quantity of that item. This relationship implies that each item has one inventory record that tracks its available stock.
+- **Session to Coach**:
+  - `M:1` - Multiple sessions can be conducted by the same coach, but each session is associated with only one coach.
+- **Review to Coach**:
+  - `1:M` - A coach can have multiple reviews written about them, suggesting that each review pertains to one coach, but a coach can accumulate many reviews over time.
+
+This ER diagram provides a simplified, conceptual model of the relationships and cardinalities between different entities in the HoopsLink system. It illustrates how different aspects of the business—customers, orders, payments, coaching sessions, reviews, and inventory—are interrelated within the database, providing a foundational structure for understanding data interactions.
+
